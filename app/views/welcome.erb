@@ -1,0 +1,12 @@
+<h1>Welcome to stepping stones! Where struggles are welcome, no judgement is allowed and goals are accomplished.</h1>
+<h3>Explore milestones below.</h3><br>
+<%@milestones.each do |m|%><br>
+<article>
+<h2><%= m.title %></h2>
+<small style="color:#d00000;font-size:15pt"><%= m.date_created %></small><br>
+<small style="color:#f5cac3;font-size:15pt"><%= m.author %></small><br>
+<p><%= m.description %></p>
+<p><%= m.plan %></p>
+</article>
+<%end %><br>
+ 

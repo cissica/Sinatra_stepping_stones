@@ -1,0 +1,103 @@
+.grid-container {
+  display: grid;
+  grid-template-columns:  0.4fr 2.3fr 0.9fr 0.4fr;
+  grid-template-rows: 0.5fr 2.1fr 0.4fr;
+  gap: 18px 0px;
+  grid-template-areas:
+    ". logo buttons ."
+    ". content content ."
+    "footer footer footer footer";
+}
+.logo { grid-area: logo; }
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+  "login signup";
+  grid-area: buttons;
+}
+.signup { grid-area: signup;
+  background-color: white;
+  border: none;
+  color: white;
+  text-decoration: none;
+  padding-top: 125px;
+  padding-right: 30px;
+  padding-left: 0px;
+  cursor: pointer; 
+}
+.login { grid-area: login; 
+  background-color: white;
+  border: none;
+  color: white;
+  padding-top: 125px;
+  padding-right: 5px;
+  padding-left: 80px;
+  text-decoration: none;
+  cursor: pointer; 
+ }
+.footer { grid-area: footer;
+  font-family: consolas;
+ }
+.content { grid-area: content;
+  padding-top: 0px;
+  font-family: consolas;
+ }
+
+@media all and (-ms-high-contrast:none) {
+
+.grid-container {
+  display: -ms-grid;
+  -ms-grid-columns: 00.2fr 2.7fr 0.9fr 0.2fr;
+  -ms-grid-rows: 0.5fr 2.1fr 0.4fr;
+  gap: 18px 0px;
+}
+
+.logo {
+  grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-column: 2;
+  -ms-grid-column-span: 2;
+}
+
+.buttons {
+  display: -ms-grid;
+  -ms-grid-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+  gap: 0px 0px;grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-column: 3;
+  -ms-grid-column-span: 3;
+}
+
+.signup {
+  
+  grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-column: 2;
+  -ms-grid-column-span: 2;
+}
+
+.login {
+  grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-column: 1;
+  -ms-grid-column-span: 1;
+}
+
+.footer {
+  grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-column: 1;
+  -ms-grid-column-span: 2;
+}
+
+.content {
+  grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-column: 2;
+  -ms-grid-column-span: 2;
+}

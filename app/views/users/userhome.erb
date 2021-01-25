@@ -1,0 +1,27 @@
+<h1><%="Hi #{user_logged_in.username}, Here are your milestones!"%></h1><br>
+<style>
+  h1{
+    font-family: consolas;
+    border: 1px solid #2176ff;
+    border-radius: 2px;
+  }
+</style>
+<%@milestones.each do |m|%>
+<h3><%= m.title %></h3>
+<%= m.date_created %><br>
+<p><%= m.description %></p>
+<p><%= m.plan %><br><br></p>
+<form action="/milestones/<%=m.id%>/edit" method=GET>
+  <input type="submit" value="Edit">
+</form><br>
+<form action="/milestones/<%=m.id%>/delete" method=POST>
+<input id="hidden" type="hidden" name="_method" value="patch">
+  <input type="submit" value="Delete Milestone">
+</form><br>
+<%end %><br>
+
+
+<form action="/profile" method=GET>
+  <input type="submit" value="My Profile">
+</form>
+

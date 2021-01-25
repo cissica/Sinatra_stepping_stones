@@ -1,0 +1,17 @@
+<h1> New Milestone </h1>
+<style>
+  h1{
+    font-family: consolas;
+    border: 1px solid #2176ff;
+    border-radius: 2px;
+  }
+</style>
+<form action="/milestones/new" method= "POST">
+  <label for="title">Title:</label><br>
+  <input style="font-size:17pt;" type="text" id="title" name="title"><br>
+  <label for="description">Description:</label><br>
+  <input style="height:150px;font-size:17pt;" type="text" id="description" name="description"><br>
+  <label for="plan">Plan:</label><br>
+  <input style="height:300px;font-size:17pt;" type="text" id="plan" name="plan"><br><br>
+  <input type="submit" value="Submit">
+</form>

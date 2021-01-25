@@ -1,0 +1,8 @@
+<form action="/milestones/<%=@milestone.id%>" method=POST>
+<input id="hidden" type="hidden" name="_method" value="patch">
+  <label for="title">Title:</label><br>
+  <input type="text" id="title" value="<%=@milestone.title%>" name="title"><br><br>
+  <label for="description">Description:</label><br>
+  <input type="description" id="description" value= "<%=@milestone.description%>" name="description"><br><br>
+  <input type="submit" value="Submit">
+</form>
