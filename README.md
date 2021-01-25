@@ -4,3 +4,9 @@ Stepping Stones is a platform where mothers can keep track of their kids milesto
 
 The users can signup, and login. 
 They can create Milestones, as well as update and delete them. 
+
+To use clone this repo
+cd into file
+open and run shotgun in terminal
+once port comes up cmd + click on it 
+this will take you to the welcome page for Stepping Stones  
