@@ -5,10 +5,14 @@ Stepping Stones is a platform where mothers can keep track of their kids milesto
 The users can signup, and login. 
 They can create Milestones, as well as update and delete them. 
 
-To use clone this repo
-cd into file
-open and run shotgun in terminal
+To use clone this repo,
+cd into file,
+open and run shotgun in terminal,
 once port comes up cmd + click on it 
 this will take you to the welcome page for Stepping Stones  
 
+Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/downshiftology_cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct.
+
+License
 https://github.com/cissica/Sinatra_stepping_stones/blob/main/LICENSE
