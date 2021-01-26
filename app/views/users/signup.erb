@@ -1,5 +1,5 @@
 <h1>Sign up below.</h1><br>
-
+<%="Must fill in all the fields when signing up." if @user && @user.errors.any?%>
 <form action="/signup" method=POST>
   <p style="border-style:inset">Please do not use you're real name for your username. This is so that we can maintain a comfortable, safe space for all users. Have fun with it! </p>
   <label for="username">Username:</label><br>

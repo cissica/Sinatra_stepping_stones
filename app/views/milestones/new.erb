@@ -6,6 +6,7 @@
     border-radius: 2px;
   }
 </style>
+<%="Must fill in all the fields when creating a new milestone." if @milestone && @milestone.errors.any?%>
 <form action="/milestones/new" method= "POST">
   <label for="title">Title:</label><br>
   <input style="font-size:17pt;" type="text" id="title" name="title"><br>

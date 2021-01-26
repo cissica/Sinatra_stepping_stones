@@ -28,11 +28,10 @@ class ApplicationController < Sinatra::Base
     end 
 
     def login(email, password)
-      user = User.find_by(:email => email)
-      if user && user.authenticate(password)
-        session[:email] = user.email
+      @user = User.find_by(:email => email)
+      if @user && @user.authenticate(password)
+        session[:email] = @user.email
       else
-        #flash key
         redirect '/login'
       end 
     end 
