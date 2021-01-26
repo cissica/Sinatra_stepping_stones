@@ -18,7 +18,6 @@ class MilestonesController < ApplicationController
         @milestone = Milestone.new
         @milestone.title = params[:title]
         @milestone.description = params[:description]
-        @milestone.author = user_logged_in.username
         @milestone.date_created = Time.now
         @milestone.user_id = user_logged_in.id
         @milestone.plan = params[:plan]
