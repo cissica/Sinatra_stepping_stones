@@ -10,3 +10,5 @@ cd into file
 open and run shotgun in terminal
 once port comes up cmd + click on it 
 this will take you to the welcome page for Stepping Stones  
+
+https://github.com/cissica/Sinatra_stepping_stones/blob/main/LICENSE
