@@ -12,7 +12,7 @@ once port comes up cmd + click on it
 this will take you to the welcome page for Stepping Stones  
 
 Contributing
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/downshiftology_cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/Sinatra_stepping_stones. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct.
 
 License
 https://github.com/cissica/Sinatra_stepping_stones/blob/main/LICENSE
