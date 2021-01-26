@@ -11,9 +11,6 @@ class ApplicationController < Sinatra::Base
 
   get "/" do
     @milestones = Milestone.all
-    if logged_in?
-      @user = user_logged_in
-    end 
     erb :welcome
   end
 

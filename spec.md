@@ -22,7 +22,7 @@ Specs:
  xYour README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 Confirm
 
- You have a large number of small Git commits
- Your commit messages are meaningful
- You made the changes in a commit that relate to the commit message
- You don't include changes in a commit that aren't related to the commit message
+ xYou have a large number of small Git commits
+ xYour commit messages are meaningful
+ xYou made the changes in a commit that relate to the commit message
+ xYou don't include changes in a commit that aren't related to the commit message
