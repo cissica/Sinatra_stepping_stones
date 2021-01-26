@@ -18,7 +18,7 @@ Specs:
  With the help of my helper methods and conditional statements in the controllers, users cannot modify other milestones except theirs 
  xInclude user input validations
  Models include validations to ensure no bad data is passed in to my database
- BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
+ --BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
  xYour README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 Confirm
 
