@@ -1,8 +1,8 @@
 <h1>Come back when you've completed your plan and write about how it went!</h1>
 <%@user.milestones.each do |m|%>
-<h2><%= m.title %></h2><br>
+<h2><%= m.title %></h2>
 <%=m.date_created%><br>
-<%=m.author%><br>
+<%=@user.username%><br>
 <%=@user.occupation%><br>
 <p><%=m.description%><br></p>
 <p><%=m.plan%></p>
