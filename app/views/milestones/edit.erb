@@ -1,8 +1,12 @@
 <form action="/milestones/<%=@milestone.id%>" method=POST>
 <input id="hidden" type="hidden" name="_method" value="patch">
   <label for="title">Title:</label><br>
-  <input type="text" id="title" value="<%=@milestone.title%>" name="title"><br><br>
+  <input style="font-size:17pt;" type="text" id="title" value="<%=@milestone.title%>" name="title"><br><br>
   <label for="description">Description:</label><br>
-  <input type="description" id="description" value= "<%=@milestone.description%>" name="description"><br><br>
+  <input style="height:150px;font-size:17pt;" type="description" id="description" value="<%=@milestone.description%>" name="description"><br><br>
+  <label for="plan">Plan:</label><br>
+  <div contentEditable="true"><input style="height:300px;font-size:17pt;" type="plan" id="plan" value= "<%=@milestone.plan%>" name="plan"></div><br><br>
   <input type="submit" value="Submit">
 </form>
+
+

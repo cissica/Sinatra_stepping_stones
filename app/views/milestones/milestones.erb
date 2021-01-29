@@ -1,9 +1,9 @@
 <h1>Come back when you've completed your plan and write about how it went!</h1>
-<%@user.milestones.each do |m|%>
+<%user_logged_in.milestones.each do |m|%>
 <h2><%= m.title %></h2>
 <%=m.date_created%><br>
-<%=@user.username%><br>
-<%=@user.occupation%><br>
+<%=user_logged_in.username%><br>
+<%=user_logged_in.occupation%><br>
 <p><%=m.description%><br></p>
 <p><%=m.plan%></p>
 

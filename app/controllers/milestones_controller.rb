@@ -1,7 +1,7 @@
 class MilestonesController < ApplicationController
 
     get '/milestones' do 
-        @user = user_logged_in
+        #@user = user_logged_in
         erb :"milestones/milestones"
     end 
 
@@ -19,6 +19,7 @@ class MilestonesController < ApplicationController
         @milestone.title = params[:title]
         @milestone.description = params[:description]
         @milestone.date_created = Time.now
+        @milestone.author = user_logged_in.username
         @milestone.user_id = user_logged_in.id
         @milestone.plan = params[:plan]
         if @milestone.save 
