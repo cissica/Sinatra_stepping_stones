@@ -37,5 +37,10 @@ class UsersController < ApplicationController
     @user.update(:username => params[:username], :email => params[:email], :occupation => params[:occupation])
     redirect '/profile'
   end 
+
+  get '/users/most-milestones' do 
+    @user = User.all.max_by{|user|user.milestones.size}
+    erb :"users/mostmilestones"
+  end 
    
 end 

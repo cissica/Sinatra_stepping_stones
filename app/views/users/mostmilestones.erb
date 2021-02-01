@@ -1,0 +1,9 @@
+<h1><%=@user.username%> has the most milestone and she is <%=@user.occupation%><h1>
+
+<h2><%=@user.milestones.size%> milestones total</h2>
+<p><%@user.milestones.each do |milestone|%>
+<%=milestone.title%><br>
+<%=milestone.date_created%><br>
+<%=milestone.description%><br>
+<%=milestone.plan%><br>
+<%end%></p>
