@@ -1,85 +1,37 @@
 <!DOCTYPE html>
-<div class="grid-container">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
  <link rel="stylesheet" href="/stylesheets/main.css" />
-  <div class="logo">
-  <a href="/">
-  <img src="/images/Stepping Stones (1).png" alt="logo">
-  <style>
-   img { 
-        max-width:100%; 
-        height: 20em; 
-   }
-   </style>
+  <a class="navbar-brand" href="/">
+    <img src="/images/Stepping Stones (1).png" class="img-fluid float-left my-3" alt="logo">
   </a>
-  </div>
-  <div class="buttons">
-    <div class="signup">
-    <%if !user_logged_in %>
-    <form action="/signup" method=GET>
-    <input type="submit" value="Signup">
-    </form>
-    <style>
-      input[type=submit] {
-      padding:10px 27px; 
-      background:#ffe66d; 
-      border:0;
-      cursor:pointer;
-      -webkit-border-radius: 1px;
-      border-radius: 1px; 
-} 
-    </style>
-    <%else%> 
-    <form action="/milestones/new" method=GET>
-    <input type="submit" value="New Milestone">
-    </form>
-    <style>
-      input[type=submit] {
-      padding:10px 27px; 
-      background:#ffe66d; 
-      border:0;
-      cursor:pointer;
-      -webkit-border-radius: 1px;
-      border-radius: 1px; 
-} 
-</style>
-    <%end%>
+ <nav class="navbar navbar-light container justify-content-center">
+    <div class="btn-group" role="group" aria-label="Navbar Buttons">
+      <%if !user_logged_in %>
+        <form action="/signup" method=GET>
+          <button class="btn btn-lg btn-outline-warning float-right mx-2 px-5" type="submit">Signup</button>
+        </form>
+          <%else%> 
+          <form action="/milestones/new" method=GET>
+            <button class="btn btn-lg btn-outline-warning float-right mx-2 px-5" type="submit">New Milestone</button>
+          </form>
+      <%end%> 
+      <%if !user_logged_in %>
+        <form action="/login" method=GET>
+          <button class="btn btn-lg btn-outline-warning mx-2 px-5" type="submit">Login</button>
+        </form>
+        <%else%> 
+        <form action="/userhome" method=GET>
+          <button class="btn btn-lg btn-outline-warning mx-2 px-5" type="submit">My Milestones</button>
+        </form>
+      <%end%>
     </div>
-    <div class="login">
-    <%if !user_logged_in %>
-    <form action="/login" method=GET>
-     <input type="submit" value="Login">
-    </form>
-    <%else%> 
-    <form action="/userhome" method=GET>
-    <input type="submit" value="My Milestones">
-    </form>
-    <%end%>
-    </div>
-  </div>
-  <div class="content">
+  </nav>
   <%= yield %>
-  <style>
-  h1{
-    font-family: consolas;
-    border: 1px solid #2176ff;
-    border-radius: 2px;
-  }
-  label{
-     font-size:18pt;
-  }
-  p{
-    font-size:18pt;
-    border-style:ridge;
-  }
-</style>
   </div>
-  <div class="footer">
-  
+  <div class="card-footer bg-transparent border-info mt-5 mb-3">
+    <p class="fst-italic text-center m-3">Please feel free to contact us at steppingstones@gmail.com for any questions, concerns or feedback</p>
   </div>
-  
-</div>
 </html>
 
 

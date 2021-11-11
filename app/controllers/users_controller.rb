@@ -1,3 +1,4 @@
+require "pry"
 class UsersController < ApplicationController
 
   get '/signup' do 
@@ -30,7 +31,7 @@ class UsersController < ApplicationController
   get '/profile/edit' do 
     @user = user_logged_in
     erb :"users/edit"
-  end   
+  end
 
   post '/profile/edit' do
     @user = user_logged_in

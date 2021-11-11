@@ -1,7 +1,7 @@
-<h1>Come back when you've completed your plan and write about how it went!</h1>
+<h1 class="display-3 fw-light m-4 p-4 text-center">Come back when you've completed your plan and write about how it went!</h1>
 <%user_logged_in.milestones.each do |m|%>
-<h2><%= m.title %></h2>
-<%=m.date_created%><br>
+<h2 class="display-5 fst-italic fw-light m-5 text-center text-muted"><%= m.title %></h2>
+<%=m.date_created.httpdate%><br>
 <%=user_logged_in.username%><br>
 <%=user_logged_in.occupation%><br>
 <p><%=m.description%><br></p>

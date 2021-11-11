@@ -23,7 +23,7 @@ class MilestonesController < ApplicationController
         @milestone.user_id = user_logged_in.id
         @milestone.plan = params[:plan]
         if @milestone.save 
-            redirect '/milestones'
+            redirect '/userhome'
             
         else 
             erb :"milestones/new"
@@ -40,13 +40,13 @@ class MilestonesController < ApplicationController
     end 
 
 
-    patch '/milestones/:id' do 
+    post '/milestones/:id' do 
         @milestone = user_logged_in.milestones.find_by(params[:id]) 
         if @milestone == nil
-            redirect "/userhome"
+            redirect "/"
         else 
-        @milestone.update(:title => params[:title], :description => params[:description])
-        redirect '/milestones'
+        @milestone.update(:title => params[:title], :description => params[:description], :plan => params[:plan])
+        redirect '/userhome'
         end 
     end    
 

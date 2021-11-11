@@ -1,15 +1,17 @@
-<h1>Sign up below.</h1><br>
-<%="Must fill in all the fields when signing up." if @user && @user.errors.any?%>
-<form action="/signup" method=POST>
-  <p style="border-style:inset">Please do not use you're real name for your username. This is so that we can maintain a comfortable, safe space for all users. Have fun with it! </p>
-  <label for="username">Username:</label><br>
-  <input type="text" id="username" name="username"><br><br>
-  <label for="email">Email:</label><br>
-  <input type="text" id="email" name="email"><br><br>
-  <p style="border-style:inset">Your occupation is important because, we want to be able demonstrate motherhood is a common groud for all, no matter our backround. Let's be real though, being a mom is an occupation! </p>
-  <label for="occupation">Occupation:</label><br>
-  <input type="text" id="occupation" name="occupation"><br><br>
-  <label for="password">Password:</label><br>
-  <input type="password" id="password" name="password"><br><br>
-  <input type="submit" value="Submit">
-</form>
+<h1 class="display-3 fw-light m-5 p-5 text-center">Sign up below</h1>
+<%if @user && @user.errors.any?%>
+  <div class="alert alert-danger" role="alert">
+    Must fill in all the fields when signing up
+  </div>
+<%end%>
+<div class="container">
+  <form action="/signup" method=POST>
+    <h2 class="display-5 fst-italic fw-light m-5 text-center text-muted">Please do not use you're real name for your username. This is so that we can maintain a comfortable, safe space for all users. Have fun with it! </h2>
+    <h3 class="mb-2 lead text-center">Your occupation is important because, we want to be able demonstrate motherhood is a common groud for all, no matter our backround. Let's be real though, being a mom is an occupation! </h3>
+    <input class="form-control form-control-lg m-3 p-2" type="text" name="username" placeholder="Username">
+    <input class="form-control form-control-lg m-3 p-2" type="text" name="email" placeholder="Email">
+    <input class="form-control form-control-lg m-3 p-2" type="text" name="occupation" placeholder="Occupation">
+    <input class="form-control form-control-lg m-3 p-2" type="password" name= "password" placeholder="Password">
+    <input class="btn btn btn-outline-warning m-3 p-2" type="submit" value="Submit">
+  </form>
+</div>

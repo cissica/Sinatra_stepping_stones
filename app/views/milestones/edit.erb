@@ -1,12 +1,11 @@
-<form action="/milestones/<%=@milestone.id%>" method=POST>
-<input id="hidden" type="hidden" name="_method" value="patch">
-  <label for="title">Title:</label><br>
-  <input style="font-size:17pt;" type="text" id="title" value="<%=@milestone.title%>" name="title"><br><br>
-  <label for="description">Description:</label><br>
-  <input style="height:150px;font-size:17pt;" type="description" id="description" value="<%=@milestone.description%>" name="description"><br><br>
-  <label for="plan">Plan:</label><br>
-  <div contentEditable="true"><input style="height:300px;font-size:17pt;" type="plan" id="plan" value= "<%=@milestone.plan%>" name="plan"></div><br><br>
-  <input type="submit" value="Submit">
-</form>
-
-
+<div class="container mt-3 form-group bg-light">
+  <form action="/milestones/<%=@milestone.id%>" method=POST>
+    <label class="lead" for="title">Title</label>
+    <textarea class="form-control" id="title" name="title"><%=@milestone.title%></textarea>
+    <label class="lead" for="description">Description</label>
+    <textarea class="form-control" class="lead" id="description" row="2" name="description"><%=@milestone.description%></textarea>
+    <label class="lead" for="plan">Plan</label>
+    <textarea class="form-control" id="plan" row="6" name="plan"><%=@milestone.plan%></textarea>
+    <input class="btn btn-lg btn-outline-warning m-3 p-2" type="submit" value="Update">
+  </form>
+</div>

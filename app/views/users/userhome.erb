@@ -1,27 +1,24 @@
-<h1><%="Hi #{user_logged_in.username}, Here are your milestones!"%></h1><br>
-<style>
-  h1{
-    font-family: consolas;
-    border: 1px solid #2176ff;
-    border-radius: 2px;
-  }
-</style>
-<%@milestones.each do |m|%>
-<h3><%= m.title %></h3>
-<%= m.date_created %><br>
-<p><%= m.description %></p>
-<p><%= m.plan %><br><br></p>
-<form action="/milestones/<%=m.id%>/edit" method=GET>
-  <input type="submit" value="Edit">
-</form><br>
-<form action="/milestones/<%=m.id%>/delete" method=POST>
-<input id="hidden" type="hidden" name="_method" value="patch">
-  <input type="submit" value="Delete Milestone">
-</form><br>
-<%end %><br>
-
-
-<form action="/profile" method=GET>
-  <input type="submit" value="My Profile">
-</form>
+<h1 class="display-3 fw-light m-5 p-5 text-center" ><%="Hi #{user_logged_in.username}, Here are your milestones!"%></h1><br>
+<div class="container mb-3">
+  <%@milestones.each do |m|%>
+    <article class="p-4 shadow">
+      <h3 class="my-3"><%= m.title %></h3>
+      <h6 class="fw-light"><%= m.date_created.httpdate %></h6>
+      <p class="mb-2 lead"><%= m.description %></p>
+      <p class="mt-2 lead font-weight-normal"><%= m.plan %></p>
+      <form action="/milestones/<%=m.id%>/edit" method=GET>
+        <input class="btn btn-sm btn-outline-warning mx-2 px-5" type="submit" value="Edit">
+      </form><br>
+      <form action="/milestones/<%=m.id%>/delete" method=POST>
+        <input id="hidden" type="hidden" name="_method" value="patch">
+        <input class="btn btn-sm btn-outline-warning mx-2 px-5" type="submit" value="Delete Milestone">
+      </form>
+    </article>
+  <%end %>
+</div>
+<div class="container">
+  <form action="/profile" method=GET>
+    <input class="btn btn-outline-warning float-left mx-2 px-5" type="submit" value="My Profile">
+  </form>
+</div>
 

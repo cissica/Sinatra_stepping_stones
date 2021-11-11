@@ -1,15 +1,16 @@
-
-<h1>My Profile.</h1>
-<p>Username: <%=@user.username %><br></p>
-<p>Email: <%=@user.email %><br></p>
-<p>Occupation: <%=@user.occupation %><br><br></p>
-
-<form action="/profile/edit" method=GET>
-  <input type="submit" value="Edit">
-  </form><br>
-
-<form action="/logout" method=POST>
-  <input type="submit" value="LOGOUT">
-  </form>
+<div class="container card text-white bg-primary justify-center mt-5" style="max-width: 38rem;">
+  <div class="card-header">My Profile</div>
+  <div class="card-body m-3">
+    <h5 class="card-title display-5">Username: <%=@user.username %></h5>
+    <h6 class="card-text">Email: <%=@user.email %></h6>
+    <h6 class="card-text">Occupation: <%=@user.occupation %></h6>
+      <form action="/profile/edit" method=GET>
+        <input class="btn btn-outline-warning m-2" type="submit" value="Edit">
+      </form>
+      <form action="/logout" method=POST>
+        <input class="btn btn-outline-warning m-2" type="submit" value="Logout">
+      </form>
+  </div>
+</div>
 
 

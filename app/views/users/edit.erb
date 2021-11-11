@@ -1,10 +1,11 @@
-<form action="/profile/edit" method=POST>
-<input id="hidden" type="hidden" name="method" value="patch">
-  <label for="username">Username:</label><br>
-  <input style="font-size:14pt;"type="text" id="username" value="<%=@user.username%>" name="username"><br><br>
-  <label for="email">Email:</label><br>
-  <input style="font-size:14pt;"type="text" id="email" value= "<%=@user.email%>" name="email"><br><br>
-  <label for="occupation">Occupation:</label><br>
-  <input style="font-size:14pt;"type="text" id="occupation" value= "<%=@user.occupation%>" name="occupation"><br><br>
-  <input type="submit" value="Submit">
-</form>
+<div class="container form-group bg-light">
+  <form class="m-4 p-3" action="/profile/edit" method=POST>
+    <label class="lead" for="username">Username</label>
+    <input class="form-control" name="username">
+    <label class="lead" for="email">Email</label>
+    <input class="form-control" name="email">
+    <label for="email">Occupation</label>
+    <input class="form-control" name="occupation">
+    <input class="btn btn-lg btn-outline-warning m-3 p-2" type="submit" value="Update">
+  </form>
+</div>

@@ -1,12 +1,17 @@
-<h1>Welcome to stepping stones! Where struggles are welcome, no judgement is allowed and goals are accomplished.</h1>
-<h3>Explore milestones below.</h3><br>
-<%@milestones.each do |m|%><br>
-<article>
-<h2><%= m.title %></h2>
-<small style="color:#d00000;font-size:15pt"><%=m.date_created%></small><br>
-<small style="color:#f5cac3;font-size:15pt"><%=m.author%></small><br>
-<p><%= m.description %></p>
-<p><%= m.plan %></p>
-</article>
-<%end %><br>
+<h1 class="display-3 fw-light m-5 p-5 text-center">Welcome to stepping stones! Where struggles are welcome, no judgement is allowed and goals are accomplished.</h1>
+<h2 class="display-5 fst-italic fw-light m-5 text-center text-muted">Explore milestones below.</h2> 
+<%@milestones.each do |m|%>
+    <article class="container p-4 shadow">
+        <h3 class="my-3 "><%= m.title %></h3>
+        <h6 class="fw-light"><%=m.date_created.httpdate%></h4>
+        <h6 class="mb-4 fst-italic fw-light"><%=m.author%></h4>
+        <p class="mb-2 lead">Description:<br/>
+            <%= m.description %>
+        </p>
+        <p class="mt-2 lead font-weight-normal">Plan:<br/>
+            <%= m.plan %>
+        </p>
+    </article>
+<%end %>
+
  
