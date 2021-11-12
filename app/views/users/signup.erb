@@ -1,7 +1,7 @@
 <h1 class="display-3 fw-light m-5 p-5 text-center">Sign up below</h1>
 <%if @user && @user.errors.any?%>
   <div class="alert alert-danger" role="alert">
-    Must fill in all the fields when signing up
+    <%= @error %>
   </div>
 <%end%>
 <div class="container">

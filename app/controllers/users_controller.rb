@@ -14,6 +14,7 @@ class UsersController < ApplicationController
       if @user.save 
         redirect '/login'
       else 
+        @error = @user.errors.messages.first.join(" ")
         erb :"users/signup"
       end 
   end 

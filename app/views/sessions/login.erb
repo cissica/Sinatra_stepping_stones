@@ -1,4 +1,9 @@
 <h1 class="display-3 fst-italic fw-light m-5 p-5 text-center">Welcome, please login here</h1>
+<%if !@user %>
+  <div class="alert alert-danger" role="alert">
+    User not found or password is incorrect, please try again.
+  </div>
+<%end%>
 <div class="container">
   <form action="/login" method=POST>
     <input class="form-control form-control-lg m-3 p-2" name="email" type="text" placeholder="Email">
@@ -6,6 +11,4 @@
     <input class="btn btn btn-outline-warning m-3 p-2" type="submit" value="Submit">
   </form>
 </div>
-
-
 
